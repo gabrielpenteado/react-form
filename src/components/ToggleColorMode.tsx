@@ -5,7 +5,7 @@ export function ToggleColorMode() {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-      <Button onClick={toggleColorMode}>
+      <Button onClick={toggleColorMode} borderTopRadius="none">
         {colorMode === 'light' ? <MoonIcon boxSize={6} /> : <SunIcon boxSize={6} />}
       </Button>
   )

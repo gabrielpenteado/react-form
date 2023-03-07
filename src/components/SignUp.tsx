@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 import {
@@ -15,36 +15,33 @@ import {
   InputGroup,
   InputRightElement,
   Checkbox,
-  useToast
+  useToast,
+  Progress
 } from "@chakra-ui/react";
 
 import { EmailIcon, CheckIcon, LockIcon } from '@chakra-ui/icons'
 
 import { ToggleColorMode } from './ToggleColorMode';
 
-type tUserData = {
-  firstname: string,
-  lastname: string,
-  email: string,
-  password: string | number
-}
+import { UserContext } from "../contexts/UserDataContext";
+
+import { IUser } from "../contexts/UserDataContext"
+
 
 
 export function SignUp() {
-  const [userData, setUserData] = useState<tUserData>(); 
-  
-  const { register, handleSubmit, formState: {errors} } = useForm<tUserData>();
-  
-  
-  const createUser = (userData: tUserData) => {
-    setUserData(userData)
-  };
-  
-  console.log(userData);
 
+  const { register, handleSubmit, formState: { errors } } = useForm<IUser>();
+
+  const context = useContext(UserContext);
+
+  function onSubmit(data: IUser) {
+    context.createUser(data)
+    context.updateUserList(data)
+  }
 
   return (
-    <form onSubmit={handleSubmit(createUser)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <Box>
         <Flex direction="column" alignItems="center" pb="48px" gap="8px">
           <Box alignSelf="flex-end">
@@ -108,13 +105,14 @@ export function SignUp() {
               />
               <Input
                 type="text"
-                variant="flushed"
+                variant="unstyled"
                 placeholder="Password."
                 _placeholder={{ opacity: 0.75, color: 'gray.500', fontSize: ["sm", "sm", "md"] }}
                 size={["sm", "sm", "md"]}
                 {...register("password")}
               />
             </InputGroup>
+            <Progress height={"2px"} value={0}/>
           </FormControl>
 
           <Checkbox pb="20px">I agree to the Terms and Conditions.</Checkbox>
@@ -123,7 +121,7 @@ export function SignUp() {
             colorScheme="linkedin"
             size={["md", "md", "lg"]}
             type="submit"
-            >
+          >
             CREATE ACCOUNT
           </Button>
         </Flex>
