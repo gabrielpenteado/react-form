@@ -3,7 +3,7 @@ import './App.css';
 
 import { Box, Stack, Progress, Spacer } from '@chakra-ui/react';
 
-import { DataDisplayer } from './components/DataDisplayer';
+import { DataDisplay } from './components/DataDisplay';
 import { SignUp } from './components/SignUp';
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
           display="flex"
           flexDirection={'column'}>
           <Progress height="2px" isIndeterminate />
-          <DataDisplayer />
+          <DataDisplay />
           <Spacer/>
           <Progress height="2px" isIndeterminate />
         </Box>

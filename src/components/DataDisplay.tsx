@@ -1,5 +1,5 @@
 
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { UserContext } from "../contexts/UserDataContext";
 
 import {
@@ -14,7 +14,7 @@ import {
 
 import { IUser } from "../contexts/UserDataContext"
 
-export function DataDisplayer() {
+export function DataDisplay() {
 
   const context = useContext(UserContext);
 
@@ -26,14 +26,13 @@ export function DataDisplayer() {
       <Heading as="h1" fontSize={["2xl", "2xl", "4xl"]} pt="44px"> Database </Heading>
       
       {usersArray.map((user, index) =>
-        <Stat mt={5}>
+        <Stat mt={5} key={index}>
           <Stack
             p={2}
             borderWidth="3px"
             borderRadius="md"
             direction="column"
             align="flex-start"
-            key={index}
           >
             <HStack>
               <StatLabel>Name: {user.firstname}</StatLabel>
