@@ -44,7 +44,7 @@ export function DataDisplayer() {
           </Stack>
         </Stat>
       )}
-
+      
     </Box>
   )
 }
