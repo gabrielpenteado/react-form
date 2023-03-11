@@ -36,7 +36,7 @@ export function Password() {
         />
         <Input
           type={show ? 'text' : 'password'}
-          variant="unstyled"
+          variant="outline"
           placeholder="Enter your password."
           _placeholder={{ opacity: 0.75, color: 'gray.500', fontSize: ["sm", "sm", "md"] }}
           size={["sm", "sm", "md"]}
@@ -48,7 +48,7 @@ export function Password() {
           </Button>
         </InputRightElement>
       </InputGroup>
-      <Progress height={"3px"} value={33.3} ml="40px" colorScheme="red" />
+      <Progress height={"4px"} mt="8px" value={33.3} ml="36px" colorScheme="red" />
     </FormControl>
   )
 }
