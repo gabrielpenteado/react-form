@@ -5,9 +5,10 @@ import { useForm, FormProvider } from "react-hook-form";
 import {
   Box,
   Flex,
-  Heading,   
+  Heading,
   Button,
-  Checkbox, 
+  Checkbox,
+  useToast
 } from "@chakra-ui/react";
 
 import { ToggleColorMode } from './ToggleColorMode';
@@ -28,9 +29,19 @@ export function SignUp() {
 
   const methods = useForm();
 
-  function onSubmit(data: IUser) {
+  const toast = useToast();
+
+  function onSubmit(data: IUser, e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
     context.createUser(data)
     context.updateUserList(data)
+
+    toast({
+      title: "Account created!",
+      status: "success",
+      duration: 2000,
+      isClosable: true
+    });
   }
 
   return (

@@ -25,7 +25,7 @@ export function Password() {
   const handleClick = () => setShow(!show);
 
   return (
-    <FormControl pt="30px" pb="40px">
+    <FormControl pt="30px" pb="40px" isInvalid={!errors.password ? false : true}>
       <FormLabel fontSize={["sm", "md", "lg"]}>Password</FormLabel>
       <InputGroup>
         <InputLeftElement
@@ -34,14 +34,20 @@ export function Password() {
           />}
           position="relative"
         />
-        <Input
-          type={show ? 'text' : 'password'}
-          variant="outline"
-          placeholder="Enter your password."
-          _placeholder={{ opacity: 0.75, color: 'gray.500', fontSize: ["sm", "sm", "md"] }}
-          size={["sm", "sm", "md"]}
-          {...register("password")}
-        />
+        <Flex direction={"column"} flexGrow="1">
+          <Input
+            type={show ? 'text' : 'password'}
+            variant="outline"
+            placeholder="Enter your password."
+            _placeholder={{ opacity: 0.75, color: 'gray.500', fontSize: ["sm", "sm", "md"] }}
+            size={["sm", "sm", "md"]}
+            {...register("password", {
+              required: "Please enter a Password",
+              minLength: { value: 8, message: "The password must be a minimum of 8 characters and should contain at least one upper- and lower-case letter, a number, and a symbol." }
+            })}
+          />
+          {errors.password && <FormErrorMessage>{errors.password.message}</FormErrorMessage>}
+        </Flex>
         <InputRightElement width='4.5rem'>
           <Button bg={"transparent"} variant={"link"} ml="26px" onClick={handleClick}>
             {show ? <ViewOffIcon /> : <ViewIcon />}
@@ -49,6 +55,6 @@ export function Password() {
         </InputRightElement>
       </InputGroup>
       <Progress height={"4px"} mt="8px" value={33.3} ml="36px" colorScheme="red" />
-    </FormControl>
+    </FormControl >
   )
 }
