@@ -11,38 +11,49 @@ export interface IUser {
 
 interface IUserContext {
   user?: IUser;
-  createUser(user: IUser): void;
+  handleCreateUser(user: IUser): void;
   userList?: IUser[];
-  updateUserList(user: IUser): void;
-  deleteUser(user: IUser): void;
+  handleDeleteUser(user: IUser): void;
 }
 
 const UserContext = createContext<IUserContext>({
   user: undefined,
-  createUser: () => { },
+  handleCreateUser: () => { },
   userList: undefined,
-  updateUserList: () => { },
-  deleteUser: () => { }
+  handleDeleteUser: () => { }
 });
 
 const UserProvider = ({ children }: { children: JSX.Element }) => {
+  const defaultUserList: IUser[] = JSON.parse(localStorage.getItem('users'));
+
   const [user, setUser] = useState<IUser>();
+  const [userList, setUserList] = useState<IUser[]>(defaultUserList || []);
 
   const toast = useToast();
 
-  function createUser(user: IUser) {
-    setUser(user);
+  function handleCreateUser(newuser: IUser) {
+    const newUser = user;
+
+    if (userList.some(userFromList => userFromList.email === newuser.email)) {
+      toast({
+        title: "User email already exist!",
+        status: "warning",
+        duration: 2000,
+        isClosable: true
+      });
+    } else {
+      setUser(newUser);
+      toast({
+        title: "Account created!",
+        status: "success",
+        duration: 2000,
+        isClosable: true
+      });
+      setUserList(prevState => [...prevState, newuser])
+    }
   };
 
-  const defaultUserList: IUser[] = JSON.parse(localStorage.getItem('users'));
-
-  const [userList, setUserList] = useState<IUser[]>(defaultUserList || []);
-
-  function updateUserList(user: IUser) {
-    setUserList(prevState => [...prevState, user])
-  }
-
-  function deleteUser(userToDelete: IUser) {
+  function handleDeleteUser(userToDelete: IUser) {
     const newUserList = userList.filter(user => user !== userToDelete);
     setUserList(newUserList);
 
@@ -61,10 +72,12 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
   }, [userList]);
 
   return (
-    <UserContext.Provider value={{ user: user, createUser, userList: userList, updateUserList, deleteUser }}>
+    <UserContext.Provider value={{ user: user, userList: userList, handleCreateUser, handleDeleteUser }}>
       {children}
     </UserContext.Provider>
   )
 }
 
 export { UserContext, UserProvider };
+
+

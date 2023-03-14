@@ -7,7 +7,6 @@ import {
   Flex,
   Heading,
   Button,
-  Checkbox,
   useToast
 } from "@chakra-ui/react";
 
@@ -20,6 +19,7 @@ import { IUser } from "../contexts/UserDataContext";
 import { Name } from "../components/SignUp/Name";
 import { Password } from "../components/SignUp/Password";
 import { Email } from "../components/SignUp/Email";
+import { HandleCheckbox } from "../components/SignUp/Checkbox";
 
 
 
@@ -33,15 +33,7 @@ export function SignUp() {
 
   function onSubmit(data: IUser, e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    context.createUser(data)
-    context.updateUserList(data)
-
-    toast({
-      title: "Account created!",
-      status: "success",
-      duration: 2000,
-      isClosable: true
-    });
+    context.handleCreateUser(data)
   }
 
   return (
@@ -60,9 +52,8 @@ export function SignUp() {
 
           <Flex direction="column" pl="36px" pr="36px">
             <Email />
-            <Password />
-
-            <Checkbox pb="20px">I agree to the Terms and Conditions.</Checkbox>
+            <Password />            
+            <HandleCheckbox />
             <Button
               fontSize={["md", "md", "lg"]}
               colorScheme="linkedin"
@@ -72,7 +63,6 @@ export function SignUp() {
               CREATE ACCOUNT
             </Button>
           </Flex>
-
         </Box>
       </form>
     </FormProvider>

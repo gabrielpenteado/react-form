@@ -33,7 +33,7 @@ export function UserCard({ user }: { user: IUser }) {
           direction="column"
           align="flex-start"
         >
-          <Button variant={"outline"} size={"xs"} alignSelf={"flex-end"} onClick={() => context.deleteUser(user)}>
+          <Button variant={"outline"} size={"xs"} alignSelf={"flex-end"} onClick={() => context.handleDeleteUser(user)}>
             <DeleteIcon fontSize={"sm"} color={"red.400"} />
           </Button>
           <HStack>

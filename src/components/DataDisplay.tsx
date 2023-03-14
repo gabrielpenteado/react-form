@@ -5,8 +5,6 @@ import { UserContext } from "../contexts/UserDataContext";
 import {
   Box,
   Heading,
-  List,
-  ListItem
 } from "@chakra-ui/react";
 
 import { IUser } from "../contexts/UserDataContext"
