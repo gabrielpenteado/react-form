@@ -3,6 +3,7 @@ import React, { createContext, useState, useEffect } from "react";
 import { useToast } from "@chakra-ui/react";
 
 export interface IUser {
+  agreements: boolean;
   firstname: string;
   lastname: string;
   email: string;
@@ -46,6 +47,7 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
       toast({
         title: "Account created!",
         status: "success",
+        position: "bottom",
         duration: 2000,
         isClosable: true
       });
@@ -60,6 +62,7 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
     toast({
       title: "User deleted!",
       status: "error",
+      position: "bottom",
       duration: 2000,
       isClosable: true
     });
@@ -70,6 +73,8 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
       localStorage.setItem('users', JSON.stringify(userList))
     }
   }, [userList]);
+
+  console.log(userList)
 
   return (
     <UserContext.Provider value={{ user: user, userList: userList, handleCreateUser, handleDeleteUser }}>

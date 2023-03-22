@@ -22,7 +22,7 @@ export function Email() {
   const { register, formState: { errors } } = useFormContext<IUser>();
 
   return (
-    <FormControl pt="30px" isInvalid={!errors.email ? false : true }  >
+    <FormControl pt="30px" isInvalid={!errors.email ? false : true}  >
       <FormLabel fontSize={["sm", "md", "lg"]}>Email</FormLabel>
       <InputGroup>
         <InputLeftElement
@@ -32,12 +32,18 @@ export function Email() {
         />
         <Flex direction={"column"} flexGrow="1">
           <Input
-            type="email"
+            type="text"
             variant="outline"
             placeholder="Enter your email."
             _placeholder={{ opacity: 0.75, color: 'gray.500', fontSize: ["sm", "sm", "md"] }}
             size={["sm", "sm", "md"]}
-            {...register("email", { required: "Please, enter your email" })}
+            {...register("email", {
+              required: "Please, enter your email.",
+              pattern: {
+                value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+                message: "Email is not valid."
+              }
+            })}
           />
           {errors.email && <FormErrorMessage>{errors.email.message}</FormErrorMessage>}
         </Flex>

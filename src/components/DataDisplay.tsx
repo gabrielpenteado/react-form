@@ -18,7 +18,7 @@ export function DataDisplay() {
 
   return (
     <Box display="flex" flexDirection={"column"} alignItems="center">
-      <Heading as="h1" fontSize={["2xl", "2xl", "4xl"]} pt="44px"> Database </Heading>
+      <Heading as="h1" fontSize={["2xl", "2xl", "4xl"]} pt="29px"> Database </Heading>
 
       {users && users.map((user) =>
         <ul>

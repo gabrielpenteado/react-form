@@ -10,12 +10,12 @@ function App() {
 
   return (
     <div className="App">
-      <Stack direction={["column", "column", "row"]} spacing="20px">
+      <Stack direction={["column", "column", "row"]} spacing="40px">
         <Box 
           w={["390px", "390px", "880px"]} 
-          h="720px"
+          h="780px"
           boxShadow='2xl' 
-          display="flex" 
+          display="flex"
           flexDirection={'column'}>
           <Progress height="2px" isIndeterminate />
           <SignUp />
@@ -24,7 +24,7 @@ function App() {
         </Box>
         <Box 
           w={["390px", "390px", "880px"]} 
-          h="720px" 
+          h="780px" 
           boxShadow='2xl'
           overflowY={"auto"}
           display="flex"
