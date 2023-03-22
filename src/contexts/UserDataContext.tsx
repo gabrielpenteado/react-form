@@ -2,12 +2,18 @@ import React, { createContext, useState, useEffect } from "react";
 
 import { useToast } from "@chakra-ui/react";
 
+import { db } from "../firebase"
+import { ref, set, onValue, remove } from "firebase/database";
+
+import { uid } from "uid"
+
 export interface IUser {
   agreements: boolean;
   firstname: string;
   lastname: string;
   email: string;
   password: string | number;
+  uuid: string | number;
 }
 
 interface IUserContext {
@@ -24,17 +30,25 @@ const UserContext = createContext<IUserContext>({
   handleDeleteUser: () => { }
 });
 
-const UserProvider = ({ children }: { children: JSX.Element }) => {
-  const defaultUserList: IUser[] = JSON.parse(localStorage.getItem('users'));
+function sendToFirabase(user: IUser) {
+  const uuid = uid();
+  set(ref(db, `/${uuid}`), {
+    agremments: user.agreements,
+    firstname: user.firstname,
+    lastname: user.lastname,
+    email: user.email,
+    password: user.password,
+    uuid: uuid
+  })
+}
 
+const UserProvider = ({ children }: { children: JSX.Element }) => {
   const [user, setUser] = useState<IUser>();
-  const [userList, setUserList] = useState<IUser[]>(defaultUserList || []);
+  const [userList, setUserList] = useState<IUser[]>([]);
 
   const toast = useToast();
 
   function handleCreateUser(newuser: IUser) {
-    const newUser = user;
-
     if (userList.some(userFromList => userFromList.email === newuser.email)) {
       toast({
         title: "User email already exist!",
@@ -42,8 +56,11 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
         duration: 2000,
         isClosable: true
       });
+
     } else {
-      setUser(newUser);
+      setUser(newuser);
+      sendToFirabase(newuser);
+
       toast({
         title: "Account created!",
         status: "success",
@@ -51,13 +68,11 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
         duration: 2000,
         isClosable: true
       });
-      setUserList(prevState => [...prevState, newuser])
     }
   };
 
   function handleDeleteUser(userToDelete: IUser) {
-    const newUserList = userList.filter(user => user !== userToDelete);
-    setUserList(newUserList);
+    remove(ref(db, `/${userToDelete.uuid}`));
 
     toast({
       title: "User deleted!",
@@ -68,13 +83,23 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
     });
   }
 
-  useEffect(() => {
-    if (userList) {
-      localStorage.setItem('users', JSON.stringify(userList))
-    }
-  }, [userList]);
 
-  console.log(userList)
+function realDatabase() {
+  onValue(ref(db), (snapshot: any) => {
+    setUserList([])
+    const data = snapshot.val();
+    if (data !== null) {
+      Object.values(data).map((user) => {
+        setUserList(prevState => [...prevState, user])
+      });
+    }
+  });
+}
+
+  useEffect(() => {
+    realDatabase();
+  }, []);
+
 
   return (
     <UserContext.Provider value={{ user: user, userList: userList, handleCreateUser, handleDeleteUser }}>

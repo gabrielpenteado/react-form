@@ -1,5 +1,5 @@
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 
 import {
@@ -27,13 +27,16 @@ export function SignUp() {
   const context = useContext(UserContext);
 
   const methods = useForm();
-
-  // const toast = useToast();
+  const submitSuccess = methods.formState.isSubmitSuccessful;
 
   function onSubmit(data: IUser, e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     context.handleCreateUser(data)
   }
+
+  useEffect (() => {
+    methods.reset()
+  },[submitSuccess]);
 
   return (
     <FormProvider {...methods}>
