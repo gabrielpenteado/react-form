@@ -1,12 +1,12 @@
 
 import { useFormContext, Controller } from "react-hook-form";
 
+import { IUser } from "../../contexts/UserDataContext";
+
 import { Checkbox, FormControl, FormErrorMessage } from "@chakra-ui/react";
 
-// import { IUser } from "../../contexts/UserDataContext";
-
 export function HandleCheckbox() {
-  const {register, control, formState: { errors } } = useFormContext();
+  const {register, control, formState: { errors } } = useFormContext<IUser>();
 
   return (
     <FormControl
@@ -20,7 +20,7 @@ export function HandleCheckbox() {
         name="agreements"
         defaultValue={false}
         control={control}
-        render={({ field }) => (
+        render={({ field }: any) => (
           <Checkbox
             {...field}
             pb="20px"
