@@ -1,6 +1,6 @@
 
 import React, { useContext, useEffect } from "react";
-import { useForm, FormProvider } from "react-hook-form";
+import { useForm, SubmitHandler, FormProvider } from "react-hook-form";
 
 import {
   Box,
@@ -26,12 +26,11 @@ export function SignUp() {
 
   const context = useContext(UserContext);
 
-  const methods = useForm();
+  const methods = useForm<IUser>();
   const submitSuccess = methods.formState.isSubmitSuccessful;
 
-  function onSubmit(data: IUser, e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    context.handleCreateUser(data)
+  const onSubmit: SubmitHandler<IUser> = (data:IUser) => {  
+    context.handleCreateUser(data);
   }
 
   useEffect (() => {
@@ -40,7 +39,7 @@ export function SignUp() {
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={methods.handleSubmit(onSubmit)}>
+      <form onSubmit={methods.handleSubmit(onSubmit)} action="www.google.com">
         <Box>
           <Flex direction="column" alignItems="center">
             <Box alignSelf="flex-end">

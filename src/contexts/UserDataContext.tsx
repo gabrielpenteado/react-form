@@ -5,7 +5,7 @@ import { useToast } from "@chakra-ui/react";
 import { db } from "../firebase"
 import { ref, set, onValue, remove } from "firebase/database";
 
-import { uid } from "uid"
+import { uid } from "uid";
 
 export interface IUser {
   agreements: boolean;
@@ -84,17 +84,17 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
   }
 
 
-function realDatabase() {
-  onValue(ref(db), (snapshot: any) => {
-    setUserList([])
-    const data = snapshot.val();
-    if (data !== null) {
-      Object.values(data).map((user) => {
-        setUserList(prevState => [...prevState, user])
-      });
-    }
-  });
-}
+  function realDatabase() {
+    onValue(ref(db), (snapshot: any) => {
+      setUserList([])
+      const data = snapshot.val();
+      if (data !== null) {
+        Object.values<IUser>(data).map((user) => {
+          setUserList(prevState => [...prevState, user])
+        });
+      }
+    });
+  }
 
   useEffect(() => {
     realDatabase();
