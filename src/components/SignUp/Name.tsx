@@ -46,7 +46,13 @@ export function Name() {
           placeholder="Enter your last name."
           _placeholder={{ opacity: 0.75, color: 'gray.500', fontSize: ["sm", "sm", "md"] }}
           size={["sm", "sm", "md"]}
-          {...register("lastname", { required: "Please, enter your last name." })}
+          {...register("lastname", { 
+            required: "Please, enter your last name.",
+            pattern: {
+              value: /^[A-Za-z]+$/,
+              message: "Only letters are accept."
+            }
+          })}
         />
         {errors.lastname && <FormErrorMessage>{errors.lastname.message}</FormErrorMessage>}
       </FormControl>
