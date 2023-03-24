@@ -40,7 +40,7 @@ export function Email() {
             {...register("email", {
               required: "Please, enter your email.",
               pattern: {
-                value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+                value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,               
                 message: "Email is not valid."
               }
             })}

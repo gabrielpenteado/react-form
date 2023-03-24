@@ -28,7 +28,7 @@ export function SignUp() {
 
   const methods = useForm<IUser>();
   const submitSuccess = methods.formState.isSubmitSuccessful;
-
+  
   const onSubmit: SubmitHandler<IUser> = (data:IUser) => {  
     context.handleCreateUser(data);
   }
@@ -39,7 +39,7 @@ export function SignUp() {
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={methods.handleSubmit(onSubmit)} action="www.google.com">
+      <form onSubmit={methods.handleSubmit(onSubmit)}>
         <Box>
           <Flex direction="column" alignItems="center">
             <Box alignSelf="flex-end">
@@ -58,9 +58,9 @@ export function SignUp() {
             <Password />
             <HandleCheckbox />         
             <Button
-              fontSize={["md", "md", "lg"]}
+              fontSize={["sm", "md", "lg"]}
               colorScheme="linkedin"
-              size={["md", "md", "lg"]}
+              size={["sm", "md", "lg"]}
               type="submit"
             >
               CREATE ACCOUNT

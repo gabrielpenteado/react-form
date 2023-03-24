@@ -57,7 +57,7 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
         isClosable: true
       });
 
-    } else {
+    } else if (userList.length <= 17) {
       setUser(newuser);
       sendToFirabase(newuser);
 
