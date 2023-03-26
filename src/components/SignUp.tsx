@@ -28,14 +28,14 @@ export function SignUp() {
 
   const methods = useForm<IUser>();
   const submitSuccess = methods.formState.isSubmitSuccessful;
-  
-  const onSubmit: SubmitHandler<IUser> = (data:IUser) => {  
+
+  const onSubmit: SubmitHandler<IUser> = (data: IUser) => {
     context.handleCreateUser(data);
   }
 
-  useEffect (() => {
+  useEffect(() => {
     methods.reset()
-  },[submitSuccess]);
+  }, [submitSuccess]);
 
   return (
     <FormProvider {...methods}>
@@ -45,9 +45,17 @@ export function SignUp() {
             <Box alignSelf="flex-end">
               <ToggleColorMode />
             </Box>
-            <Box pb="40px" position="relative" bottom="15px">
-              <Heading as="h1" fontWeight={700} fontSize={["2xl", "2xl", "4xl"]}> React-Hook-Form </Heading>
-              <Heading as="h2" fontWeight={500} fontSize={["xl", "xl", "2xl"]}> Integrated with Chakra-UI </Heading>
+            <Box
+              pb="40px"
+              position="relative"
+              bottom="15px"
+              display="flex"
+              flexDirection="column"
+            >
+              <Heading as="h1" fontWeight={700} fontSize={["2xl", "2xl", "4xl"]}>
+                React-form </Heading>
+              <Heading as="h2" fontWeight={500} fontSize={["xl", "xl", "2xl"]}
+                alignSelf="center"> with Chakra-UI </Heading>
             </Box>
           </Flex>
 
@@ -56,7 +64,7 @@ export function SignUp() {
           <Flex direction="column" pl="36px" pr="36px">
             <Email />
             <Password />
-            <HandleCheckbox />         
+            <HandleCheckbox />
             <Button
               fontSize={["sm", "md", "lg"]}
               colorScheme="linkedin"

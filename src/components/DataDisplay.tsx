@@ -18,13 +18,15 @@ export function DataDisplay() {
 
   return (
     <Box display="flex" flexDirection={"column"} alignItems="center">
-      <Heading as="h1" fontSize={["2xl", "2xl", "4xl"]} pt="29px"> Database </Heading>
-
+      <Box pb="40px" position="relative" display="flex" flexDirection="column">
+        <Heading as="h1" fontSize={["2xl", "2xl", "4xl"]} pt="29px" alignSelf="center"> Firebase </Heading>
+        <Heading as="h2" fontWeight={500} fontSize={["xl", "xl", "2xl"]}> Realtime database </Heading>
+      </Box>
       {users && users.map((user) =>
         <ul>
-            <li key={user.email} >
-              <UserCard user={user} />
-            </li>
+          <li key={user.email} >
+            <UserCard user={user} />
+          </li>
         </ul>
       )}
 
