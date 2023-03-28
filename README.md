@@ -101,13 +101,13 @@ To start using this <strong>React form</strong> follow the instructions below.
 </h4>
 
 ### ⭐ Light / Dark mode
-<!-- ![Light / Dark Mode](https://raw.githubusercontent.com/gabrielpenteado/mydearpage/main/public/assets/gifs/icons.gif) -->
+![Light / Dark Mode](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/light-dark.jpg)
 
 ### ⭐ Password strength meter
-<!-- ![Password Strength Meter](https://raw.githubusercontent.com/gabrielpenteado/mydearpage/main/public/assets/gifs/todo.gif)<br> -->
+![Password Strength Meter](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/password.gif)<br>
 
 ### ⭐ Pop-up message
-<!-- ![Pop-Up Message](https://raw.githubusercontent.com/gabrielpenteado/mydearpage/main/public/assets/gifs/background.gif) -->
+![Pop-Up Message](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/pop-ups.jpg)
 
 <br>
 
