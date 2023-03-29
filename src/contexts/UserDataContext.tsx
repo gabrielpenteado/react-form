@@ -2,11 +2,6 @@ import React, { createContext, useState, useEffect } from "react";
 
 import { useToast } from "@chakra-ui/react";
 
-import { db } from "../firebase"
-import { ref, set, onValue, remove } from "firebase/database";
-
-import { uid } from "uid";
-
 export interface IUser {
   agreements: boolean;
   firstname: string;
@@ -30,21 +25,11 @@ const UserContext = createContext<IUserContext>({
   handleDeleteUser: () => { }
 });
 
-function sendToFirabase(user: IUser) {
-  const uuid = uid();
-  set(ref(db, `/${uuid}`), {
-    agremments: user.agreements,
-    firstname: user.firstname,
-    lastname: user.lastname,
-    email: user.email,
-    password: user.password,
-    uuid: uuid
-  })
-}
-
 const UserProvider = ({ children }: { children: JSX.Element }) => {
+  const defaultUserList: IUser[] = JSON.parse(localStorage.getItem('users') ?? '[]');
+
   const [user, setUser] = useState<IUser>();
-  const [userList, setUserList] = useState<IUser[]>([]);
+  const [userList, setUserList] = useState<IUser[]>( defaultUserList || []);
 
   const toast = useToast();
 
@@ -59,7 +44,6 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
 
     } else if (userList.length <= 17) {
       setUser(newuser);
-      sendToFirabase(newuser);
 
       toast({
         title: "Account created!",
@@ -68,11 +52,13 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
         duration: 2000,
         isClosable: true
       });
+      setUserList(prevState => [...prevState, newuser])
     }
   };
 
   function handleDeleteUser(userToDelete: IUser) {
-    remove(ref(db, `/${userToDelete.uuid}`));
+    const newUserList = userList.filter(user => user !== userToDelete);
+    setUserList(newUserList);
 
     toast({
       title: "User deleted!",
@@ -83,22 +69,11 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
     });
   }
 
-
-  function realDatabase() {
-    onValue(ref(db), (snapshot: any) => {
-      setUserList([])
-      const data = snapshot.val();
-      if (data !== null) {
-        Object.values<IUser>(data).map((user) => {
-          setUserList(prevState => [...prevState, user])
-        });
-      }
-    });
-  }
-
   useEffect(() => {
-    realDatabase();
-  }, []);
+    if (userList) {
+      localStorage.setItem('users', JSON.stringify(userList))
+    }
+  }, [userList]);
 
 
   return (
