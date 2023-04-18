@@ -50,17 +50,16 @@
     <img src="https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/form.gif"> 
 </p>
 
-### 🔨 Built with
-![react](https://img.shields.io/badge/React-20232A?style=flat-sqaure&logo=react&logoColor=61DAFB)
-![vite](https://img.shields.io/badge/Vite-B73BFE?style=flat-square&logo=vite&logoColor=FFD62E)
-![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![chakraui](https://img.shields.io/badge/Chakra--UI-319795?style=flat-square&logo=chakra-ui&logoColor=white)
-![firabase](https://img.shields.io/badge/firebase-ffca28?style=flat-square&logo=firebase&logoColor=black)
+### Built with
+![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![chakraui](https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white)
+![firabase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
 
-### 👉 Website
+### Website
 You can access the project website by clicking below:
 
-<!-- [![Website shields.io](https://img.shields.io/website?down_color=red&down_message=DOWN&style=for-the-badge&up_color=green&up_message=UP&url=https%3A%2F%2Fmydearpage.cyclic.app)](https://mydearpage.cyclic.app) -->
 [![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://react-firebase-form.vercel.app)
 <br>
 <br>
@@ -68,7 +67,7 @@ You can access the project website by clicking below:
 ## 🔥 Getting started 
 To start using this <strong>React form</strong> follow the instructions below.
 
-### Requirements ❕
+### Requirements
 - npm (^9.5.0)
 - react(^18.2.0)
 - [vite](https://vitejs.dev/guide/)
@@ -77,14 +76,14 @@ To start using this <strong>React form</strong> follow the instructions below.
 - [react-password-strength-bar](https://www.npmjs.com/package/react-password-strength-bar)
 - [uid](https://www.npmjs.com/package/uid)
 
-### ▶ Browsers Support
+### Browsers Support
 [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png" alt="Chrome" />](https://www.google.com/intl/en/chrome/)<br> Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_24x24.png" alt="Edge" />](https://www.microsoft.com/en-us/edge)<br> Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_24x24.png" alt="Firefox" />](https://www.mozilla.org/en-US/firefox/new/)<br> Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_24x24.png" alt="Safari" />](https://www.apple.com/br/safari/)<br> Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_24x24.png" alt="Opera" />](https://www.opera.com)<br> Opera 
 |:------------:|:------------:|:-----------: |:------------:|:------------:|
 |      ✅      |      ✅      |     ✅      |      ✅      |      ✅      |
 | last version | last version | last version | last version | last version |
 
 
-### 💾 Installation
+### Installation
 1. Clone the repository<br>
 `git clone https://github.com/gabrielpenteado/react-form`
 
@@ -107,20 +106,20 @@ replace the firebase configuration.
 `npm run dev`
 <br>
 
-## 🌐 Features
+## 🚀 Features
 <h4 align="center">
  <a href="#-light-dark-mode">Light / Dark mode</a> •
  <a href="#-password-strength-meter">Password strength meter</a> • 
  <a href="#-pop-up-message">Pop-up message</a> • 
 </h4>
 
-### 🔹 Light / Dark mode
+### Light / Dark mode
 ![Light / Dark Mode](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/light-dark.jpg)
 
-### 🔹 Password strength meter
+### Password strength meter
 ![Password Strength Meter](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/password.gif)<br>
 
-### 🔹 Pop-up message
+### Pop-up message
 ![Pop-Up Message](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/pop-ups.jpg)
 
 <br>
@@ -131,8 +130,20 @@ The foundation of the open source community are the contributions, them inspire 
 
 ## 📄 License
 This project is licensed under the MIT License. See the [LICENSE.md](https://github.com/gabrielpenteado/react-form/blob/main/LICENSE.md) file for details.
+<br>
+<br>
 
-## 📞 Contact me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-penteado)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://github.com/gabrielpenteado)
-[![Gmail](https://img.shields.io/badge/gabripenteado@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:gabripenteado@gmail.com)
+<div align="center">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/63300269?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d" />
+  <h1>Gabriel Penteado</h1>
+  <strong>Full Stack Developer</strong>
+  <br/>
+  <br/>
+
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-penteado)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gabrielpenteado)
+  [![Gmail](https://img.shields.io/badge/gabripenteado@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabripenteado@gmail.com)
+  <br />
+  <br />
+</div>
+

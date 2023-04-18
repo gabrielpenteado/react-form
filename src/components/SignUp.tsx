@@ -41,7 +41,7 @@ export function SignUp() {
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit(onSubmit)}>
         <Box>
-          <Flex direction="column" alignItems="center">
+          <Box display="flex" flexDirection="column" alignItems="center">
             <Box alignSelf="flex-end">
               <ToggleColorMode />
             </Box>
@@ -57,11 +57,11 @@ export function SignUp() {
               <Heading as="h2" fontWeight={500} fontSize={["xl", "xl", "2xl"]}
                 alignSelf="center"> with Chakra-UI </Heading>
             </Box>
-          </Flex>
+          </Box>
 
           <Name />
 
-          <Flex direction="column" pl="36px" pr="36px">
+          <Box display="flex" flexDirection="column" pl="36px" pr="36px">
             <Email />
             <Password />
             <HandleCheckbox />
@@ -73,7 +73,7 @@ export function SignUp() {
             >
               CREATE ACCOUNT
             </Button>
-          </Flex>
+          </Box>
         </Box>
       </form>
     </FormProvider>
