@@ -22,19 +22,17 @@
 
 ## 📜 Contents 
 - [About the project](#-about-the-project)
-  - [Built with](#-built-with)
-  - [Demonstration video](#-demonstration-video)
-  - [Website](#-website)
+  - Built with
+  - Website
 - [Getting Started](#-getting-started)
-  - [Requirements](#-requirements)
-  - [Installation](#-installation)
+  - Requirements
+  - Installation
 - [Features](#-features)
-  - [Light / Dark Mode](#-light-dark-mode)
-  - [Password Strength Meter](#-password-strength-meter)
-  - [Pop-Up Message](#-pop-up-message)
+  - Light / Dark Mode
+  - Password Strength Meter
+  - Pop-Up Message
 - [Contributions](#-contributions)
 - [License](#-license)
-- [Contact me](#-contact-me)
 <br>
 
 ## 🔎 About the project
@@ -107,20 +105,15 @@ replace the firebase configuration.
 <br>
 
 ## 🚀 Features
-<h4 align="center">
- <a href="#-light-dark-mode">Light / Dark mode</a> •
- <a href="#-password-strength-meter">Password strength meter</a> • 
- <a href="#-pop-up-message">Pop-up message</a> • 
-</h4>
 
 ### Light / Dark mode
-![Light / Dark Mode](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/light-dark.jpg)
+![light-dark-mode](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/light-dark.jpg)
 
 ### Password strength meter
-![Password Strength Meter](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/password.gif)<br>
+![password-strength-meter](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/password.gif)<br>
 
 ### Pop-up message
-![Pop-Up Message](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/pop-ups.jpg)
+![pop-up-message](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/pop-ups.jpg)
 
 <br>
 
