@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBcuFeTS9nS6ujr043NwkiQGl9YJQ9YwJM",
-  authDomain: "freedatabaseform.firebaseapp.com",
-  projectId: "freedatabaseform",
-  storageBucket: "freedatabaseform.appspot.com",
-  messagingSenderId: "750827951023",
-  appId: "1:750827951023:web:2f8437599abc3df61e555a"
+  apiKey: "AIzaSyD46EBiAQX53LmXlKSYcEVlUFgib6fqNBw",
+  authDomain: "freedatabasereactform.firebaseapp.com",
+  projectId: "freedatabasereactform",
+  storageBucket: "freedatabasereactform.appspot.com",
+  messagingSenderId: "340718458007",
+  appId: "1:340718458007:web:fa3c64effa06bd1f3505d2"
 };
 
 // Initialize Firebase
