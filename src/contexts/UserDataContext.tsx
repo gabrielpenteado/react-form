@@ -32,8 +32,8 @@ const UserContext = createContext<IUserContext>({
 
 function sendToFirabase(user: IUser) {
   const uuid = uid();
-  set(ref(db, `/${uuid}`), {
-    agremments: user.agreements,
+  set(ref(db, '/users' + `/${uuid}`), {
+    agreements: user.agreements,
     firstname: user.firstname,
     lastname: user.lastname,
     email: user.email,
@@ -57,7 +57,7 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
         isClosable: true
       });
 
-    } else if (userList.length <= 17) {
+    } else if (userList.length <= 14) {
       setUser(newuser);
       sendToFirabase(newuser);
 
@@ -72,7 +72,7 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
   };
 
   function handleDeleteUser(userToDelete: IUser) {
-    remove(ref(db, `/${userToDelete.uuid}`));
+    remove(ref(db, 'users/' + `${userToDelete.uuid}`));
 
     toast({
       title: "User deleted!",
@@ -85,15 +85,15 @@ const UserProvider = ({ children }: { children: JSX.Element }) => {
 
 
   function realDatabase() {
-    onValue(ref(db), (snapshot: any) => {
-      setUserList([])
+    onValue(ref(db, 'users/'), (snapshot) => {
+      setUserList([]);
       const data = snapshot.val();
       if (data !== null) {
         Object.values<IUser>(data).map((user) => {
-          setUserList(prevState => [...prevState, user])
+          setUserList(prevState => [...prevState, user]);
         });
-      }
-    });
+      };
+    })
   }
 
   useEffect(() => {

@@ -23,8 +23,8 @@ export function DataDisplay() {
         <Heading as="h2" fontWeight={500} fontSize={["xl", "xl", "2xl"]}> Realtime database </Heading>
       </Box>
       {users && users.map((user) =>
-        <ul>
-          <li key={user.email} >
+        <ul key={user.uuid}>
+          <li>
             <UserCard user={user} />
           </li>
         </ul>
