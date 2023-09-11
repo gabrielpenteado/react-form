@@ -46,9 +46,53 @@
    <em>light/dark mode</em>.
 </p>
 
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">
+          Video
+        </th>
+        <th style="text-align: center">
+          Website
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a href="https://www.youtube.com/watch?v=yN3159m4fnw">
+            <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+          </a>
+        </td>  
+        <td>
+          <a href="https://react-firebase-form.vercel.app/">
+            <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+          </a>
+        </td>  
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 <p align="center">
-    <img src="https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/form.gif"> 
+    <img src="https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/reactform.png"> 
 </p>
+
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/light.jpg">Light-theme</a>
+        </th>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/dark.jpg">Dark-theme</a>
+        </th>  
+      </tr>
+    </thead>
+  </table>
+</div>
 
 ### Built with
 
@@ -58,13 +102,6 @@
 ![chakraui](https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white)
 ![firabase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
 ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
-
-### Website
-
-You can access the project website by clicking below:
-
-[![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://react-firebase-form.vercel.app)
-<br>
 <br>
 
 ## 🔥 Getting started
@@ -112,21 +149,19 @@ _Note: You can run the following command to install latest SDK :_
    `npm run dev`
    <br>
 
-## 🚀 Features
+## 💫 Features
 
 ### Light / Dark mode
 
-![light-dark-mode](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/light-dark.jpg)
+- The user can choose between a light or dark theme.
 
 ### Password strength meter
 
-![password-strength-meter](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/password.gif)<br>
+- A password's strength is measured according to predefined rules and is displayed using a horizontal scale next to the input field.
 
-### Pop-up message
+### Pop-up messages
 
-![pop-up-message](https://raw.githubusercontent.com/gabrielpenteado/react-form/main/src/assets/pop-ups.jpg)
-
-<br>
+- Custom pop-up messages are displayed for each action.
 
 ## 🤝 Contributions
 
