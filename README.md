@@ -96,16 +96,14 @@
   </table>
 </div>
 
-### 🔨 Built with
+### Built with
 
-![react](https://img.shields.io/badge/React-20232A?style=flat-sqaure&logo=react&logoColor=61DAFB)
-![vite](https://img.shields.io/badge/Vite-B73BFE?style=flat-square&logo=vite&logoColor=FFD62E)
-![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![chakraui](https://img.shields.io/badge/Chakra--UI-319795?style=flat-square&logo=chakra-ui&logoColor=white)
-![firabase](https://img.shields.io/badge/firebase-ffca28?style=flat-square&logo=firebase&logoColor=black)
-![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=flat-square&logo=reacthookform&logoColor=white)
-
-<!-- [![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://react-firebase-form.vercel.app) -->
+![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![chakraui](https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white)
+![firabase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
+![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
 <br>
 
 ## 🔥 Getting started
@@ -122,14 +120,14 @@ To start using this <strong>React form</strong> follow the instructions below.
 - [react-password-strength-bar](https://www.npmjs.com/package/react-password-strength-bar)
 - [uid](https://www.npmjs.com/package/uid)
 
-### ▶ Browsers Support
+### Browsers Support
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png" alt="Chrome" />](https://www.google.com/intl/en/chrome/)<br> Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_24x24.png" alt="Edge" />](https://www.microsoft.com/en-us/edge)<br> Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_24x24.png" alt="Firefox" />](https://www.mozilla.org/en-US/firefox/new/)<br> Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari_24x24.png" alt="Safari" />](https://www.apple.com/br/safari/)<br> Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_24x24.png" alt="Opera" />](https://www.opera.com)<br> Opera |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                   ✅                                                                                   |                                                                              ✅                                                                              |                                                                                       ✅                                                                                       |                                                                                ✅                                                                                |                                                                        ✅                                                                         |
 |                                                                              last version                                                                              |                                                                         last version                                                                         |                                                                                  last version                                                                                  |                                                                           last version                                                                           |                                                                   last version                                                                    |
 
-### 💾 Installation
+### Installation
 
 1. Clone the repository<br>
    `git clone https://github.com/gabrielpenteado/react-form`
@@ -153,21 +151,19 @@ _Note: You can run the following command to install latest SDK :_
    `npm run dev`
    <br>
 
-## 🌐 Features
+## 💫 Features
 
-### 🔹 Light / Dark mode
+### Light / Dark mode
 
-<p>The user can choose between a light or dark theme.</p>
+- The user can choose between a light or dark theme
 
-### 🔹 Password strength meter
+### Password strength meter
 
-<p>A password's strength is measured according to predefined rules and is displayed using a horizontal scale next to the input field.</p>
+- A password's strength is measured according to predefined rules and is displayed using a horizontal scale next to the input field
 
-### 🔹 Pop-up messages
+### Pop-up messages
 
-<p>Custom pop-up messages are displayed for each action.</p>
-
-<br>
+- Custom pop-up messages are displayed for each action.
 
 ## 🤝 Contributions
 
@@ -178,8 +174,22 @@ The foundation of the open source community are the contributions, them inspire 
 
 This project is licensed under the MIT License. See the [LICENSE.md](https://github.com/gabrielpenteado/react-form/blob/main/LICENSE.md) file for details.
 
-## 📞 Contact me
+<div align="center">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/63300269?v=4&h=100&w=100&fit=cover&mask=circle&maxage=7d" />
+  <h1>Gabriel Penteado</h1>
+  <strong>Full Stack Developer</strong>
+  <br/>
+  <br/>
+
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-penteado)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gabrielpenteado)
+  [![Gmail](https://img.shields.io/badge/gabripenteado@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabripenteado@gmail.com)
+  <br />
+  <br />
+</div>
+
+<!-- ## 📞 Contact me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-penteado)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white)](https://github.com/gabrielpenteado)
-[![Gmail](https://img.shields.io/badge/gabripenteado@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:gabripenteado@gmail.com)
+[![Gmail](https://img.shields.io/badge/gabripenteado@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:gabripenteado@gmail.com) -->
