@@ -6,10 +6,8 @@
   A React form integrated with ChakraUI and Firebase realtime database.  
 </h2>
 
-<div align="center">
-  <a href="https://github.com/gabrielpenteado/react-form_chakra-firebase/blob/main/LICENSE.md">
-    <img src="https://img.shields.io/github/license/gabrielpenteado/react-form?color=informational&style=flat-square" alt="license"/>
-  </a>
+<div align="center">  
+  <img src="https://img.shields.io/github/license/gabrielpenteado/react-form?color=informational&style=flat-square" alt="license"/>
 
   <img src="https://img.shields.io/static/v1?label=npm&message=v9.5.0&color=informational&style=flat-square" alt="react version">
 
