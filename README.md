@@ -7,9 +7,7 @@
 </h2>
 
 <div align="center">
-  <a href="https://github.com/gabrielpenteado/react-form_chakra-firebase/blob/main/LICENSE.md">
-    <img src="https://img.shields.io/github/license/gabrielpenteado/react-form?color=informational&style=flat-square" alt="license"/>
-  </a>
+  <img src="https://img.shields.io/github/license/gabrielpenteado/react-form?color=informational&style=flat-square" alt="license"/>
 
   <img src="https://img.shields.io/static/v1?label=npm&message=v9.5.0&color=informational&style=flat-square" alt="react version">
 
@@ -181,11 +179,12 @@ This project is licensed under the MIT License. See the [LICENSE.md](https://git
   <br/>
   <br/>
 
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-penteado)
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gabrielpenteado)
-  [![Gmail](https://img.shields.io/badge/gabripenteado@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabripenteado@gmail.com)
-  <br />
-  <br />
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gabriel-penteado)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gabrielpenteado)
+[![Gmail](https://img.shields.io/badge/gabripenteado@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gabripenteado@gmail.com)
+<br />
+<br />
+
 </div>
 
 <!-- ## 📞 Contact me
